@@ -59,3 +59,25 @@ export default {
     
 }
 </script>
+
+<style lang="scss" scoped>
+
+@import '../../style.scss';
+
+.sponsor {
+    @include mobile {
+        display: flex;
+        flex-direction: column;
+    }
+    .sponsor_left {
+        @include mobile {
+            flex:none!important;
+        }
+    }
+    .sponsor_right {
+        @include mobile {
+            flex:none!important;
+        }
+    }
+}
+</style>

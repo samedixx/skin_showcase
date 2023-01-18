@@ -27,6 +27,15 @@ body {
     background: #c80037;
 }
 
+/* hide btn scrollbar for mobile */
+.menu {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+.menu::-webkit-scrollbar {
+    display: none;
+}
+
 @mixin tablet {
     @media (max-width:960px) {
         @content;

@@ -39,8 +39,8 @@
             <div class="header_rightSide flex items-center gap-3">
                 <!-- Auth -->
                 <div v-if="!user_valid" class="auth flex items-center gap-3">
-                    <button @click="openPopup" class="text-black flex items-center h-10 px-5 transition rounded ease-in-out delay-150 border border-black  hover:-translate-y-1 hover:scale-110 hover:bg-black hover:text-white hover:border-white duration-300">Login</button>
-                    <button class="text-black flex items-center h-10 transition ease-in-out delay-150 px-5 rounded hover:-translate-y-1 hover:scale-110 border border-black  hover:bg-black hover:text-white hover:border-white duration-300">Contact us</button>
+                    <button @click="openPopup" class="action-btn text-black flex items-center h-10 px-5 transition rounded ease-in-out delay-150 border border-black  hover:-translate-y-1 hover:scale-110 hover:bg-black hover:text-white hover:border-white duration-300">Login</button>
+                    <button class="action-btn text-black flex items-center h-10 transition ease-in-out delay-150 px-5 rounded hover:-translate-y-1 hover:scale-110 border border-black  hover:bg-black hover:text-white hover:border-white duration-300">Contact us</button>
                 </div>
                 <div v-if="user_valid" class="logged_user">
                     <span class="dark:text-white">Welcome back, <span class="user uppercase dark:text-dor-100 text-blue-800 font-bold text-xl">{{this.logged_user}}</span></span>
@@ -57,9 +57,9 @@
 
         <!-- Demo popup -->
         <div style="z-index:99;" :class="showCookiePopup ? 'demopopup border bg-black text-white absolute w-[100%] h-[60px] flex gap-3 items-center bottom-0 px-2' : 'demopopup close border bg-black text-white absolute w-[100%] h-[60px] flex gap-3 items-center bottom-0 px-2'">
-            <h3 class="text-dor-100 border-dor-100 whitespace-nowrap mr-2">KEEP IN MIND</h3>
+            <h3 class="text-dor-100 titleCok border-dor-100 whitespace-nowrap mr-2">KEEP IN MIND</h3>
             <p>Welcome to our website! Please note that this is a demo site, intended for showcasing our capabilities and features. The information displayed on this site is for demonstration purposes only and may not be accurate or up-to-date. If you have any questions or concerns, please feel free to contact us. Thank you for visiting!</p>
-            <button class="bg-dor-500 p-2 flex items-center justify-center hover:bg-green-600 duration-300" @click="acceptCookiePolicy">Accept</button>
+            <button class="bg-dor-500 acceptCon p-2 flex items-center justify-center hover:bg-green-600 duration-300" @click="acceptCookiePolicy">Accept</button>
         </div>
     </div>
 </template>
@@ -109,6 +109,7 @@ export default {
         },
         logout() {
             localStorage.removeItem('user')
+            location.reload();
         }
     },
     mounted() {
@@ -136,15 +137,40 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '../../style.scss';
+
 .demopopup {
     transition:0.4s all cubic-bezier(0.6, -0.28, 0.735, 0.045);
     overflow:hidden;
     background: rgb(0 0 0 / 50%);
-}
-.demopopup {
     &.close {
         height:0!important;
         transition:0.4s allcubic-bezier(0.6, -0.28, 0.735, 0.045)
+    }
+    @include mobile {
+        height:auto;
+        flex-direction: column;
+        align-items: center;
+        padding: 0 20px;
+        background:rgb(0 0 0 / 76%);
+        gap:0;
+    }
+    .titleCok {
+        @include mobile {
+            --tw-text-opacity: 1;
+            color: rgb(46 193 147 / var(--tw-text-opacity));
+            height: 35px;
+            align-items: center;
+            display: flex;
+            width: 100%;
+            justify-content: center;
+        }
+    }
+    .acceptCon {
+        @include mobile {
+            width: 100%;
+            margin: 0.5rem 0;
+        }
     }
 }
 
@@ -154,5 +180,74 @@ export default {
     color: #404040;
     font-size: 14px;
     text-transform: uppercase;
+}
+
+.topbar {
+    @include mobile {
+        height:60px;
+    }
+    .dateTime {
+        @include mobile {
+
+        }
+    }
+}
+.header {
+    @include mobile {
+        display: block;
+    }
+
+    .header_logo  {
+        @include mobile {
+            margin-bottom: 0.5rem;
+        }
+    }
+
+    .menu {
+        @include mobile {
+            display: flex;
+            width: 100%;
+            min-width: 100%;
+            overflow-x: scroll;
+        }
+        .menu-item {
+            @include mobile {
+                min-width: 200px;
+                border: 1px solid #cece;
+                white-space: nowrap;
+                justify-content: center;
+                display: flex;
+                margin-bottom: 0.5rem;
+            }
+        }
+    }
+
+    .logged_user {
+        @include mobile {
+            display:none;
+        }
+    }
+
+    .auth {
+        @include mobile {
+            width: 100%;
+        }
+    }
+
+    .action-btn {
+        @include mobile {
+            display: flex;
+            flex: 1;
+            justify-content: center;
+            border: 1px solid #cecece!important;
+        }
+    }
+
+    .header_rightSide  {
+        @include mobile {
+            display:none;
+        }
+    }
+
 }
 </style>
