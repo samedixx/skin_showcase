@@ -1,0 +1,40 @@
+body {
+    margin:0;
+    padding:0;
+    overflow: hidden;
+}
+
+/* width */
+*::-webkit-scrollbar {
+    width: 10px;
+}
+
+  /* Track */
+*::-webkit-scrollbar-track {
+    background: #cecece;
+    width: 5px;
+}
+
+  /* Handle */
+*::-webkit-scrollbar-thumb {
+    background: #c80037;
+    border-radius: 5px;
+    width:5px;
+}
+
+  /* Handle on hover */
+*::-webkit-scrollbar-thumb:hover {
+    background: #c80037;
+}
+
+@mixin tablet {
+    @media (max-width:960px) {
+        @content;
+    }
+}
+
+@mixin mobile {
+    @media (max-width: 480px) {
+        @content;
+    }
+}
