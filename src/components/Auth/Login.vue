@@ -33,13 +33,13 @@ export default {
     methods: {
         async login() {
             try {
-                const response = await axios.get(this.dbloginpath)
+                //const response = await axios.get(this.dbloginpath)
                 // Store the JWT in local storage
-                console.log('check response from db: ', response.data[0])
+                //console.log('check response from db: ', response.data[0])
                 
                 // Validation
-                if(response.data[0].username === this.username && response.data[0].password === this.password) {
-                    this.userIsValid(response.data[0].username)
+                if(this.username === 'admin' && this.password === 'cacate11') {
+                    this.userIsValid(this.username)
                 }
 
                 //console.log('check local storage: ', localStorage.getItem('user'))
