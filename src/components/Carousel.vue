@@ -38,11 +38,14 @@
   >
 
   <swiper-slide>
-      <img src="../assets/release/bulllsLive.png" />
-    </swiper-slide>
-    <swiper-slide>
       <img src="../assets/release/bullSport.png" />
-    </swiper-slide>
+  </swiper-slide>
+  <swiper-slide>
+    <img src="../assets/release/chicago/chicagoLive.png" />
+  </swiper-slide>
+  <swiper-slide>
+    <img src="../assets/release/chicago/chicagoCasino.png" />
+  </swiper-slide>
   </swiper>
 
   <swiper
@@ -55,10 +58,13 @@
     v-if="activeRelease === 'retro'"
   >
       <swiper-slide>
+        <img src="../assets/release/retroSport.png" />
+      </swiper-slide>
+      <swiper-slide>
         <img src="../assets/release/retrolive.png" />
       </swiper-slide>
       <swiper-slide>
-        <img src="../assets/release/retroSport.png" />
+        <img src="../assets/release/retrò/retroCasino.png" />
       </swiper-slide>
   </swiper>
 
@@ -91,6 +97,8 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 
+
+
 // import required modules
 import { Pagination, Navigation } from "swiper";
 
@@ -111,10 +119,17 @@ export default {
 };
 </script>
 
-<style scoped>
+<style scoped lang="scss">
+@import '../style.scss';
+
+
 .swiper {
     width: calc(100vw - 197px);
     height: 600px;
+    @include mobile {
+      width: auto!important;
+      height: auto!important;
+    }
 }
 
 .swiper img {

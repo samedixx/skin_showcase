@@ -2,14 +2,14 @@
     <div class="sidebar">
     <div class="menu-sidebar flex flex-col justify-center">
 
-        <div class="device_choose flex items-center h-[60px]">
+        <!--<div class="device_choose flex items-center h-[60px]">
             <div class="desktop flex items-center justify-center" style="flex:1;">
                 <span class="fa fa-desktop" style="font-size:20px;"></span>
             </div>
             <div class="mobile flex items-center justify-center" style="flex:1;">
                 <span class="fa fa-mobile" style="font-size:20px;"></span>
             </div>
-        </div>
+        </div>-->
 
         <div class="items" style="display:none;">
 
