@@ -23,10 +23,10 @@
                     </div>
                     <router-link to="/release1" class="dark:text-white text-xs">DEMO Release stile bet365</router-link>
                 </div>
-                <div class="menu-item p-[15px] border-b-2 hover:border-b-2 duration-300 hover:border-yellow-400 hover:scale-110 dark:text-white">
+                <!--<div class="menu-item p-[15px] border-b-2 hover:border-b-2 duration-300 hover:border-yellow-400 hover:scale-110 dark:text-white">
                     <router-link to="/release2" class="dark:text-white text-xs">DEMO Release stile goldbet</router-link>
                 </div>
-                <!--<div class="menu-item p-[15px] border-b-2 hover:border-b-2 duration-300 hover:border-red-400 hover:scale-110 dark:text-white">
+                <div class="menu-item p-[15px] border-b-2 hover:border-b-2 duration-300 hover:border-red-400 hover:scale-110 dark:text-white">
                     <router-link to="/release3" class="dark:text-white text-xs">Release stile Chigago Bulls</router-link>
                 </div>
                 <div class="menu-item p-[15px] border-b-2 hover:border-b-2 duration-300 hover:border-red-400 hover:scale-110 dark:text-white">
