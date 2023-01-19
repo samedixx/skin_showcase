@@ -35,7 +35,7 @@ export default {
                 //console.log('check response from db: ', response.data[0])
                 
                 // Validation
-                if(this.username === 'admin' && this.password === 'cacate11') {
+                if(this.username === 'admin' && this.password === 'password23') {
                     this.userIsValid(this.username)
                 }
 
