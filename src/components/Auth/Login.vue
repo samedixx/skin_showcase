@@ -16,7 +16,7 @@
 </template>
 
 <script>
-
+import router from 'vue-router'
 
 export default {
     name:'LoginView',
@@ -37,6 +37,7 @@ export default {
                 // Validation
                 if(this.username === 'admin' && this.password === 'password23') {
                     this.userIsValid(this.username)
+                    router.push("/")
                 }
 
                 //console.log('check local storage: ', localStorage.getItem('user'))
