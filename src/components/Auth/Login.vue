@@ -3,7 +3,7 @@
         <div class="login_header">
             <h3 class="dark:text-white text-gray-500 text-lg font-bold flex flex-col items-center gap-3.5 w-96">
                 <img class="w-8" src="../../assets/logo/logo.png" alt="logo" />
-                FEED HUNT
+                Skin Showcase
             </h3>
         </div>
         <div class="login_body flex flex-col justify-center p-3 gap-3">
@@ -11,9 +11,6 @@
             <input v-model="this.username" type="text" class="p-3 bg-gray-200 rounded focus:outline-none" placeholder="Username" />
             <input v-model="this.password" type="password" class="p-3 bg-gray-200 rounded focus:outline-none" placeholder="Password" />
             <button @click="login" class="rounded bg-proton-button text-white px-4 py-2">Login</button>
-            <div class="login_action">
-                <div class="forgot_password text-xs p-2 flex justify-center">Forgot password?</div>
-            </div>
         </div>
     </div>
 </template>
