@@ -3,6 +3,7 @@
         <div class="sliderDor"></diV>  
         <div class="sponsor w-[100%] h-[100vh] flex" style="min-width:100%;">
             <div class="sponsor_left" style="flex:1;">
+            <div class="flex justify-between items-center">
             <label for="release" class="pl-2 uppercase font-bold">Choose a Release:</label>
             <select name="release" id="release" v-model="activeRelease" class="m-2 border h-[45px]" @change="handleRelease" style="outline:none;">
                 <option value="bet365">Release bet365</option>
@@ -10,6 +11,7 @@
                 <option value="chicago">Release Chigago Bulls</option>
                 <option value="retro">Release stile Retrò</option>
             </select>
+            </div>
 
                 <Sidebar :handleRelease="handleRelease" />
             </div>

@@ -4,8 +4,8 @@
             <div class="dateTime">
                 {{dateTime}}
             </div>
-            <div v-if="this.user_valid" class="logoutSection">
-                <button class="flex bg-black text-white items-center"  @click="logout" style="height:25px;">Logout</button>
+            <div v-if="this.user_valid" class="logoutSection flex items-center justify-center" style="height:100%;">
+                <button class="flex bg-black text-white justify-center items-center rounded px-2"  @click="logout" style="height:80%;">Logout</button>
             </div>
         </div>
         <div class="header bg-white dark:bg-dor-500 p-3 flex items-center justify-between">
@@ -241,6 +241,15 @@ export default {
             flex: 1;
             justify-content: center;
             border: 1px solid #cecece!important;
+        }
+    }
+    .logoutSection {
+
+        @include mobile {
+            height: 100%;
+            width: 60px;
+            display: flex;
+            align-items: center;
         }
     }
 }
