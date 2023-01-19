@@ -1,6 +1,6 @@
 <template>
     <div class="main flex w-[100%]">
-        <Sponsor />
+        <Sponsor class="w-[100%]"/>
     </div>
 </template>
 

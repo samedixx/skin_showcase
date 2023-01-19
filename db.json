@@ -5,6 +5,51 @@
       "username": "commercial",
       "password": "cacate11"
     }
+  ],
+  "screens": [
+    {
+      "skin": "betplay365",
+      "desktop": {
+        "sport": "../assets/release/bet365/desktop/bet365.png",
+        "live": "../assets/release/bet365/desktop/bet365live.png"
+      },
+      "mobile": {
+        "sport": "" ,
+        "live": "",
+        "casino": "",
+        "poker": ""
+      }
+    },
+    {
+      "skin": "goldbet",
+      "desktop": {
+        "sport": "" ,
+        "live": "",
+        "casino": "",
+        "poker": ""
+      },
+      "mobile": {
+        "sport": "" ,
+        "live": "",
+        "casino": "",
+        "poker": ""
+      }
+    },
+    {
+      "skin": "chicago bulls",
+      "desktop": {
+        "sport": "" ,
+        "live": "",
+        "casino": "",
+        "poker": ""
+      },
+      "mobile": {
+        "sport": "" ,
+        "live": "",
+        "casino": "",
+        "poker": ""
+      }
+    }
   ]
 }
 

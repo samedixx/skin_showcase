@@ -11,7 +11,7 @@
             </div>
         </div>
 
-        <div class="items">
+        <div class="items" style="display:none;">
 
             <div class="item-group hover:bg-gray-200 duration-300 flex justify-center items-center flex-col border-t-2 gap-1 border-gray-200 h-[120px]">
                 <img class="w-[40px] hover:scale-110 duration-300" src="https://img.wellgame.live/Ball.png" alt="sport" />
@@ -55,7 +55,7 @@ export default {
         
     },
     props: {
-
+        handleRelease: Function
     },
     mounted() {
 

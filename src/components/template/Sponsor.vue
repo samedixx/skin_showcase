@@ -1,12 +1,20 @@
 <template>
     <div>
         <div class="sliderDor"></diV>  
-        <div class="sponsor w-[100%] h-[100vh] flex">
+        <div class="sponsor w-[100%] h-[100vh] flex" style="min-width:100%;">
             <div class="sponsor_left" style="flex:1;">
-                <Sidebar />
+            <label for="release" class="pl-2 uppercase font-bold">Choose a Release:</label>
+            <select name="release" id="release" v-model="activeRelease" class="m-2 border h-[45px]" @change="handleRelease" style="outline:none;">
+                <option value="bet365">Release bet365</option>
+                <option value="goldbet">Release Goldbet</option>
+                <option value="chicago">Release Chigago Bulls</option>
+                <option value="retro">Release stile Retrò</option>
+            </select>
+
+                <Sidebar :handleRelease="handleRelease" />
             </div>
             <div class="sponsor_right flex" style="flex:8;">
-                <img src="../../assets/release/bet365.png" />
+                <Carousel :activeRelease="activeRelease" />
             </div>
         </div>
     </div>
@@ -14,46 +22,33 @@
 
 <script>
 import Sidebar from './Sidebar.vue'
-
-/*
-
-# duplicare header senza menu release demo ed inserie quello senza link nella home === fatto
-
-# per accedere alla showcase dove ci sono link demo bisogna fare prima login === fatto
-
-# creare nuove route per utente non loggato === fatto
-
-# creare homepage di presentazione e pagina contatti
-
-# inserire carousel dor
-
-# inserire icone pagine sport live casino casino_live virtuali poker === fatto
-
-*/
+import Carousel from '../Carousel.vue'
 
 export default {
     name:'SponsorView',
     data() {
         return {
-        skins: [
-            {
-                name: 'bet365',
-                sport: '',
-                live: '', 
-                casino: '',
-                casino_live: '',
-                virtuali: ''
-            }
-        ]
+            activeRelease: 'bet365'
         }
     },
     components: {
-        Sidebar
+        Sidebar,
+        Carousel
     },
     props: {
 
     },
     mounted() {
+
+    },
+    methods: {
+        changeScreenRelease(release) {
+            console.log(release)
+        },
+
+        handleRelease() {
+            console.log('check Active Release ==> ', this.activeRelease)
+        }
 
     }
     

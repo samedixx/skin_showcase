@@ -1,5 +1,10 @@
 # feedhunt
 
+## Install sass loader when you clone on server before building for production - FIX
+```
+npm install -D sass-loader@^10 sass
+```
+
 ## Project setup
 ```
 yarn install

@@ -242,12 +242,5 @@ export default {
             border: 1px solid #cecece!important;
         }
     }
-
-    .header_rightSide  {
-        @include mobile {
-            display:none;
-        }
-    }
-
 }
 </style>
