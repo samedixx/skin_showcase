@@ -37,7 +37,7 @@ export default {
                 // Validation
                 if(this.username === 'admin' && this.password === 'password23') {
                     this.userIsValid(this.username)
-                    router.push("/")
+                    window.scrollTo({top: 0})
                 }
 
                 //console.log('check local storage: ', localStorage.getItem('user'))
