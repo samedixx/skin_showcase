@@ -44,7 +44,7 @@
             </div>
             <div class="sponsor_right flex" style="flex:8;">
                 
-                <div class="homepage">
+                <div class="homepage" v-if="activeRelease === 'select'">
                     <swiper
                         v-if="activeRelease === 'select'"
                         :spaceBetween="30"
@@ -67,8 +67,8 @@
                         
                     </swiper>
 
-                    <div  v-if="activeRelease === 'select'" class="service-title">Our Services</div>
-                    <div  v-if="activeRelease === 'select'" class="services flex items-center gap-2">
+                    <div  v-if="activeRelease === 'Skin'" class="service-title">Our Services</div>
+                    <div  v-if="activeRelease === 'Skin'" class="services flex items-center gap-2">
                         <div class="service-item flex items-center hover:bg-gray-200 duration-300">
                             <div class="img_parent">
                                 <img src="https://mediatest.playbet24.xyz/site/commons_sportbet25/img/new_images/mbet717/extra/icons/sport.png" />
@@ -139,7 +139,7 @@
                     </div>
                 </div>
 
-                <Carousel :activeRelease="activeRelease" />
+                <Carousel v-if="activeRelease !== 'select'" :activeRelease="activeRelease" />
 
                
 
@@ -208,18 +208,25 @@ export default {
 
 @import '../../style.scss';
 
-.swiper-slide[data-v-e3565ce0] {
-    border-radius: 10px;
-    overflow: hidden;
+
+
+.sponsor_left {
+    width: 240px!important;
+    min-width: 240px;
 }
 
 .homepage {
     width: 100%;
-    min-width: 100%;
     height: 100%;
     min-height: 100%;
     display: flex;
     flex-direction:column;
+}
+
+
+
+.swiper-slide {
+    width:100%!important;
 }
 
 .text_parent {
@@ -277,11 +284,7 @@ export default {
     padding-right: 10px;
 }
 
-.swiper {height:30%!important;}
 
-.swiper-button-next, .swiper-button-prev {height:50%!important;}
-
-.swiper-button-next, .swiper-button-prev {top:25%!important;}
 
 .sponsor {
     @include mobile {
@@ -301,8 +304,7 @@ export default {
 }
 
 .swiper {
-width: 100vh;
-height: 100%;
+height: 60%!important;
 overflow:visible!important;
 }
 

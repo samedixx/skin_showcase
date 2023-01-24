@@ -9,6 +9,7 @@
     :navigation="true"
     :modules="modules"
     class="mySwiper w-[1000px]"
+    v-if="activeRelease === '365'"
     
   >
     <swiper-slide>
@@ -212,4 +213,8 @@ export default {
 
 }
 
+.swiper img[data-v-e3565ce0] {
+    position: relative;
+    top: 125px;
+}
 </style>
