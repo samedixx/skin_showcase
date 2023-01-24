@@ -247,10 +247,14 @@ export default {
 
         @include mobile {
             height: 100%;
-            width: 60px;
+            width: 100%;
             display: flex;
             align-items: center;
         }
+    }
+    .logoutSection button {
+        width:100%!important;
+        background:rgb(123, 10, 10);
     }
 }
 </style>

@@ -223,10 +223,15 @@ export default {
     flex-direction:column;
 }
 
-
+.sponsor_left {
+    @include mobile {
+        width:100%!important;
+        min-width:100%!important;
+    }
+}
 
 .swiper-slide {
-    width:100%!important;
+        width:100%!important;
 }
 
 .text_parent {
