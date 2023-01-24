@@ -16,3 +16,28 @@ export default {
 
 }
 </script>
+
+<style lang="scss" scoped>
+@import '../../style.scss';
+
+.authPopup {
+    @include mobile {
+        z-index: 999999;
+        top: 0;
+        position: absolute;
+    }
+}
+
+h3.dark\:text-white.text-gray-500.text-lg.font-bold.flex.flex-col.items-center.gap-3\.5.w-96 {
+    @include mobile {
+        width: 100%;
+    }
+}
+
+.popup-inner {
+    @include mobile {
+        width: 90%;
+    }
+}
+
+</style>
