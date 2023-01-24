@@ -1,11 +1,8 @@
 <template>
-    <div class="header_wrapper">
+    <div class="header_wrapper" style="border-bottom:0.5px solid #cecece;">
         <div class="topbar bg-dor-lig flex justify-between px-2 items-center h-[25px] text-xs px-2 dark:bg-dor-1000 dark:text-white">
             <div class="dateTime">
                 {{dateTime}}
-            </div>
-            <div v-if="this.user_valid" class="logoutSection flex items-center justify-center" style="height:100%;">
-                <button class="flex bg-black text-white justify-center items-center rounded px-2"  @click="logout" style="height:80%;">Logout</button>
             </div>
         </div>
         <div class="header bg-white dark:bg-dor-500 p-3 flex items-center justify-between">
@@ -21,7 +18,7 @@
                     <div v-if="isNew" class="new relative">
                         <img src="../../assets/new.png" class="new_label absolute w-[42px] right-[-30px] top-[-40px]" alt="new-label" />
                     </div>
-                    <router-link to="/release1" class="dark:text-white text-xs">DEMO Release stile bet365</router-link>
+                    <router-link to="/release1" class="dark:text-white text-xs">DEMO Release stile 365</router-link>
                 </div>
                 <!--<div class="menu-item p-[15px] border-b-2 hover:border-b-2 duration-300 hover:border-yellow-400 hover:scale-110 dark:text-white">
                     <router-link to="/release2" class="dark:text-white text-xs">DEMO Release stile goldbet</router-link>
@@ -43,7 +40,10 @@
                     <button class="action-btn text-black flex items-center h-10 transition ease-in-out delay-150 px-5 rounded hover:-translate-y-1 hover:scale-110 border border-black  hover:bg-black hover:text-white hover:border-white duration-300">Contact us</button>
                 </div>
                 <div v-if="user_valid" class="logged_user">
-                    <span class="dark:text-white">Welcome back, <span class="user uppercase dark:text-dor-100 text-blue-800 font-bold text-xl">{{this.logged_user}}</span></span>
+                    <span class="dark:text-white">Welcome back, <span class="user uppercase dark:text-dor-100 text-green-800 font-bold">{{this.logged_user}}</span></span>
+                </div>
+                <div v-if="this.user_valid" class="logoutSection flex items-center justify-center" style="height:100%;">
+                    <button class="flex bg-green-600 text-white justify-center items-center rounded px-2 h-[35px]"  @click="logout">Logout</button>
                 </div>
                 <!-- Dark Mode Toggle -
                 <button v-if="!darkMode" @click="toggleDarkMode" class="dark:text-white text-white border border-white p-3 rounded-lg flex items-center gap-1"><i class="fa fa-moon-o" aria-hidden="true"></i><svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg></button>

@@ -1,6 +1,6 @@
 <template>
     <div class="iframe flex w-[100%]">
-        <iframe :src="url" class="iframe_real w-[100%] h-[100vh]"></iframe>
+        <iframe :src="url" class="iframe_real w-[100%]" style="height:calc(100vh - 76.6px)"></iframe>
     </div>
 </template>
 
